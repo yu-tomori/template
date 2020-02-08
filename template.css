@@ -1,0 +1,154 @@
+:root {
+    --font-family: 'Noto Serif JP', serif;
+    /* font system in Phone */
+    --phone-font-catch-copy: 24px;
+    --phone-font-menu: 24px;
+    --phone-font-section-title: 24px;
+    --phone-font-section-description: 14px;
+    --phone-font-bottom-menu: 14px;
+    --phone-font-bottom-address: 14px;
+    --phone-font-copy-right: 10px;
+    /* font system in PC */
+    --pc-font-catch-copy: 52px;
+    --pc-font-menu: 24px;
+    --pc-font-section-title: 34px;
+    --pc-font-section-description: 24px;
+    --pc-font-bottom-menu: 24px;
+    --pc-font-bottom-address: 24px; 
+    --pc-font-copy-right: 14px;
+
+    /* color system */
+    --color-background: #FFFFFF;
+    --color-description: #7D7D7D;
+
+    /* portion system in Phone */
+    --phone-width-main: 86%;
+}
+
+
+
+
+/* screen =< 780px */
+@media screen and (max-width: 780px) {
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section, header, div, span {
+    display: block;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: var(--phone-font-section-description);
+    background-color: var(--color-background);
+}
+
+/* header */
+header {
+    width: 100vw;
+    height: 90px;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#logo-wrapper {
+    float: left;
+}
+
+#logo-wrapper img {
+    height: 30px;
+}
+
+#header-menu {
+    float: right;
+}
+
+#header-menu div {
+    height: 35px;
+    width: 40px;
+}
+
+.menu-line {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+/* top-section */
+#top-wrapper {
+    width: 100vw;
+    height: 225px;
+}
+
+#top-text-wrapper {
+    width: 100vw;
+    padding-top: 75px;
+    padding-bottom: 20px;
+}
+
+#top-text-wrapper p {
+    font-size: var(--phone-font-catch-copy);
+    text-align: center;
+}
+
+#top-line {
+    width: 187px;
+    height: 3px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #000000;
+}
+
+#sns-icons-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 180px;
+    margin: auto;
+}
+
+#sns-icons-wrapper a i {
+    font-size: 20px;
+    color: #000000;
+}
+
+}
+
+
+
+
+/* screen => 781 */
+@media screen and (min-width: 781px) {
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section, header, div, span {
+    display: block;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: var(--pc-font-section-description);
+    backrgound-color: var(--color-background);
+}
+
+}

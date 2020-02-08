@@ -13,6 +13,8 @@
     <meta property="og:site_name" content="サンプル会社ホームページ">
     <meta property="og:locale" content="ja_JP">
 
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
     <link rel="icon" href="./sample-favicon.ico">
     <link rel="stylesheet" href="./template.css">
     <script rel="text/javascript" src="./template.js"></script>
@@ -20,11 +22,11 @@
 <body>
     <header>
         <div id="logo-wrapper">
-            <img id="header-logo" src="./logo.png">
+            <img src="./logo.png">
         </div>
 
         <div id="header-menu">
-            <div id="menu-lines-wrapper" onclick="slideInMenu()">
+            <div onclick="slideInMenu()">
                 <span class="menu-line"></span>
                 <span class="menu-line"></span>
                 <span class="menu-line"></span>
@@ -32,8 +34,9 @@
         </div>
     </header>
 
+    <!-- 後でスライドイン実装する。それまで、display:noneにしておく -->
     <section id="slide-in-menu">
-        <div id="slide-in-menu-wrapper">
+        <div id="slide-in-menu-wrapper" style="display:none;">
             <button onclick="scrollToSection(1)">サンプルセクションタイトル1</button>
             <button onclick="scrollToSection(2)">サンプルセクションタイトル2</button>
             <button onclick="scrollToSection(3)">サンプルセクションタイトル3</button>
@@ -41,15 +44,15 @@
     </section>
 
     <section id="top-section">
-        <div id="top-box">
-            <div id="top-text-wrapper"><p>サンプルキャッチコピー</p></div>
+        <div id="top-wrapper">
+            <div id="top-text-wrapper"><p>全ての人に余裕を</p></div>
             <div id="top-line"></div>
 
             <div id="sns-icons-wrapper">
-                <a href="https://twitter.com/..."><img src="./twitter.png"></a>
-                <a href="https://twitter.com/..."><img src="./twitter.png"></a>
-                <a href="https://twitter.com/..."><img src="./twitter.png"></a>
-                <a href="https://twitter.com/..."><img src="./twitter.png"></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </section>
