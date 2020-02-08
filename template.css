@@ -90,7 +90,6 @@ header {
     margin-bottom: 5px;
     background-color: black;
     border-radius: 3px;
-    transition-duration: .4s;
 }
 
 #slide-in-menu-wrapper {
@@ -142,6 +141,7 @@ header {
     margin: auto;
     margin-bottom: 60px;
     font-size: var(--phone-font-menu);
+    color: #000000;
 }
 
 #open:checked + #slide-in-menu-wrapper {
@@ -269,6 +269,226 @@ html {
     font-family: var(--font-family);
     font-size: var(--pc-font-section-description);
     backrgound-color: var(--color-background);
+}
+
+/* header */
+header {
+    width: 100vw;
+    height: 90px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#logo-wrapper {
+    float: left;
+}
+
+#logo-wrapper img {
+    height: 35px;
+}
+
+#header-menu {
+    float: right;
+}
+
+#header-menu label {
+    position: relative;
+    display: block;
+    height: 45px;
+    width: 60px;
+    cursor: pointer;
+}
+
+#open {
+    display: none;
+}
+
+.menu-line {
+    width: 100%;
+    height: 4px;
+    margin-bottom: 6px;
+    background-color: black;
+    border-radius: 4px;
+}
+
+#slide-in-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: -285px;
+    width: 285px;
+    height: 100vh;
+    transition: left .5s, right .5s;
+    background-color: #FFFFFF;
+}
+
+#slide-in-menu-wrapper label {
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 15px;
+    height: 35px;
+    width: 40px;
+}
+
+.close-menu-upside {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 13px;   
+    background-color: black;
+    border-radius: 3px; 
+    -webkit-transform: translateY(8px) rotate(-30deg);
+    transform: translateY(8px) rotate(-30deg);
+}
+
+.close-menu-downside {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    -webkit-transform: translateY(-8px) rotate(30deg);
+    transform: translateY(-8px) rotate(30deg);
+}
+
+#slide-in-menu {
+    padding-top: 20vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#slide-in-menu a {
+    display: block;
+    margin: auto;
+    margin-bottom: 60px;
+    font-size: var(--pc-font-menu);
+    color: #000000;
+}
+
+#open:checked + #slide-in-menu-wrapper {
+    right: 0;
+}
+
+/* top-section */
+#top-wrapper {
+    width: 100vw;
+    height: 480px;
+}
+
+#top-text-wrapper {
+    width: 100vw;
+    padding-top: 165px;
+    padding-bottom: 60px;
+}
+
+#top-text-wrapper p {
+    font-size: var(--pc-font-catch-copy);
+    text-align: center;
+}
+
+#top-line {
+    width: 415px;
+    height: 4px;
+    margin: auto;
+    margin-bottom: 25px;
+    background-color: #000000;
+}
+
+#sns-icons-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 315px;
+    margin: auto;
+}
+
+#sns-icons-wrapper a i {
+    font-size: 30px;
+    color: #000000;
+}
+
+/* section */
+.section-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 700px;
+}
+
+.section-image-wrapper {
+    width: 50vw;
+    height: 500px;
+}
+
+.section-image-wrapper img {
+    width: 100%;
+}
+
+.section-text-wrapper {
+    width: 50vw;
+    padding: 60px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: var(--pc-font-section-title);
+    font-weight: bold;
+}
+
+.section-description {
+    font-size: var(--pc-font-section-description);
+    color: var(--color-description);
+}
+
+.section-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.section-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* bottom section */
+#bottom-wrapper {
+    width: 80vw;
+    margin: auto;
+    margin-top: 210px;
+}
+
+#bottom-menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 180px;
+}
+
+#bottom-menu-wrapper a {
+    display: block;
+    color: #000000;
+    margin-right: 75px;
+    margin-bottom: 30px;
+    font-size: var(--pc-font-bottom-menu);
+    text-decoration-color: #000000;
+}
+
+#bottom-addresses {
+    width: 100%;
+    margin-bottom: 270px;
+}
+
+#bottom-addresses p {
+    font-size: var(--pc-font-bottom-address);
+    margin-bottom: 15px;
+}
+
+#copy-right {
+    margin-bottom: 45px;
+    font-size: var(--pc-font-copy-right);
+    text-align: center;
 }
 
 }
