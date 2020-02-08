@@ -15,7 +15,7 @@
 
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
-    <link rel="icon" href="./sample-favicon.ico">
+    <!--<link rel="icon" href="./sample-favicon.ico">-->
     <link rel="stylesheet" href="./template.css">
     <script rel="text/javascript" src="./template.js"></script>
 </head>
@@ -26,22 +26,26 @@
         </div>
 
         <div id="header-menu">
-            <div onclick="slideInMenu()">
+            <label for="open">
                 <span class="menu-line"></span>
                 <span class="menu-line"></span>
                 <span class="menu-line"></span>
-            </div>
-        </div>
-    </header>
+            </label>
+            <input type="checkbox" id="open">
+            <div id="slide-in-menu-wrapper">
+                <label for="open">
+                    <span class="close-menu-upside"></span>
+                    <span class="close-menu-downside"></span>
+                </label>
 
-    <!-- 後でスライドイン実装する。それまで、display:noneにしておく -->
-    <section id="slide-in-menu">
-        <div id="slide-in-menu-wrapper" style="display:none;">
-            <button onclick="scrollToSection(1)">サンプルセクションタイトル1</button>
-            <button onclick="scrollToSection(2)">サンプルセクションタイトル2</button>
-            <button onclick="scrollToSection(3)">サンプルセクションタイトル3</button>
-        </div>
-    </section>
+                <div id="slide-in-menu">
+                    <a href="#section1" onclick="closeSlideInMenu()">サンプルセクションタイトル1</a>
+                    <a href="#section2" onclick="closeSlideInMenu()">サンプルセクションタイトル2</a>
+                    <a href="#section3" onclick="closeSlideInMenu()">サンプルセクションタイトル3</a>
+                </div>
+            </div>
+       </div>
+    </header>
 
     <section id="top-section">
         <div id="top-wrapper">
@@ -59,7 +63,7 @@
 
     <section id="section1">
        <div class="section-wrapper">
-            <div class="section-image-wrapper section-right"><img src="section1-image.jpg"></div>
+            <div class="section-image-wrapper section-right"><img src="section1.jpg"></div>
             <div class="section-text-wrapper section-left">
                 <p class="section-title">サンプルセクションタイトル</p>
                 <p class="section-description">サンプル説明サンプル説明サンプル説明サンプル説明</p>
@@ -69,7 +73,7 @@
 
     <section id="section2">
        <div class="section-wrapper">
-            <div class="section-image-wrapper section-left"><img src="section2-image.jpg"></div>
+            <div class="section-image-wrapper section-left"><img src="section2.jpg"></div>
             <div class="section-text-wrapper section-right">
                 <p class="section-title">サンプルセクションタイトル</p>
                 <p class="section-description">サンプル説明サンプル説明サンプル説明サンプル説明</p>
@@ -79,7 +83,7 @@
 
     <section id="section3">
        <div class="section-wrapper">
-            <div class="section-image-wrapper section-right"><img src="section3-image.jpg"></div>
+            <div class="section-image-wrapper section-right"><img src="section3.jpg"></div>
             <div class="section-text-wrapper section-left">
                 <p class="section-title">サンプルセクションタイトル</p>
                 <p class="section-description">サンプル説明サンプル説明サンプル説明サンプル説明</p>
@@ -92,9 +96,9 @@
     <section id="bottom-section">
         <div id="bottom-wrapper">
             <div id="bottom-menu-wrapper">
-                <button onclick="scrollToSection(1)">サンプルセクションタイトル1</button>
-                <button onclick="scrollToSection(2)">サンプルセクションタイトル2</button>
-                <button onclick="scrollToSection(3)">サンプルセクションタイトル3</button>
+                <a href="#section1">サンプルセクションタイトル1</a>
+                <a href="#section2">サンプルセクションタイトル2</a>
+                <a href="#section3">サンプルセクションタイトル3</a>
             </div>
 
             <div id="bottom-addresses">

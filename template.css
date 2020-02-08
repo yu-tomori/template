@@ -72,9 +72,16 @@ header {
     float: right;
 }
 
-#header-menu div {
+#header-menu label {
+    position: relative;
+    display: block;
     height: 35px;
     width: 40px;
+    cursor: pointer;
+}
+
+#open {
+    display: none;
 }
 
 .menu-line {
@@ -83,6 +90,62 @@ header {
     margin-bottom: 5px;
     background-color: black;
     border-radius: 3px;
+    transition-duration: .4s;
+}
+
+#slide-in-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: -285px;
+    width: 285px;
+    height: 100vh;
+    transition: left .5s, right .5s;
+    background-color: #FFFFFF;
+}
+
+#slide-in-menu-wrapper label {
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 15px; 
+    height: 35px;
+    width: 40px;
+}
+
+.close-menu-upside {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 13px;   
+    background-color: black;
+    border-radius: 3px; 
+    -webkit-transform: translateY(8px) rotate(-30deg);
+    transform: translateY(8px) rotate(-30deg);
+}
+
+.close-menu-downside {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    -webkit-transform: translateY(-8px) rotate(30deg);
+    transform: translateY(-8px) rotate(30deg);
+}
+
+#slide-in-menu {
+    padding-top: 20vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#slide-in-menu a {
+    display: block;
+    margin: auto;
+    margin-bottom: 60px;
+    font-size: var(--phone-font-menu);
+}
+
+#open:checked + #slide-in-menu-wrapper {
+    right: 0;
 }
 
 /* top-section */
@@ -121,6 +184,63 @@ header {
 #sns-icons-wrapper a i {
     font-size: 20px;
     color: #000000;
+}
+
+/* section */
+.section-image-wrapper img {
+    width: 100vw;
+}
+
+.section-text-wrapper {
+    width: var(--phone-width-main);
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: var(--phone-font-section-title);
+    font-weight: bold;
+}
+
+.section-description {
+    font-size: var(--phone-font-section-description);
+    color: var(--color-description);
+}
+
+/* bottom section */
+#bottom-wrapper {
+    width: var(--phone-width-main);
+    margin: auto;
+    margin-top: 90px;
+}
+
+#bottom-menu-wrapper {
+    margin-bottom: 105px;
+}
+
+#bottom-menu-wrapper a {
+    display: block;
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: var(--phone-font-bottom-menu);
+    text-decoration-color: #000000;
+}
+
+#bottom-addresses {
+    margin-bottom: 90px;
+}
+
+#bottom-addresses p {
+    font-size: var(--phone-font-bottom-address);
+    margin-bottom: 10px;
+}
+
+#copy-right {
+    margin-bottom: 15px;
+    font-size: var(--phone-font-copy-right);
+    text-align: center;
 }
 
 }
